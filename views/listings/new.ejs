@@ -1,0 +1,53 @@
+<% layout("/layout/boilerplate") %>
+ <!-- <div style="
+  background-image: url('/images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+"> -->
+<div class="row mt-3">
+    <div class="col-8 offset-2">
+ <h2><i>Create a new listing</i></h2>
+ <form method="POST" action="/listings" enctype="multipart/form-data">
+   
+  <div class="row">
+  <label for="title" class="form-label">title</label>  
+  <input name="listing[title]" placeholder="type a title" type="text"class="form-control"
+  required/>  
+</div>
+
+    <div class="mb-3">
+    <label for="description" class="form-label">description</label>
+<textarea name="listing[description]"class="form-control" required></textarea>
+</div>
+
+<div class="mb-3">
+  <label for="image" class="form-label"> upload Image</label>  
+  <input name="listing[image][url]" class="form-control" type="file" required/> 
+</div>
+
+<div class="row">
+    <div class="mp-3 col-md-4">
+  <label for="price" class="form-label">price</label>  
+  <input name="listing[price]" placeholder="1200" type="number"class="form-control"
+ required />  
+</div>
+<div class="mb-3 col-md-8">
+  <label for="country" class="form-label">country</label> 
+  <input name="listing[country]" placeholder="India" type="text" class="form-control"
+  required/> 
+  </div>
+  </div>
+  <div class="mb-3">
+  <label for="country" class="form-label">Location</label> 
+  <input name="listing[location]" placeholder="Jaipur" type="text" class="form-control"
+  required/>   
+</div>
+<br>
+<button class="btn btn-dark edit-btn mt-3"><i>Add</i></button>
+ </form>
+ <br>    
+</div>
+</div>
+</div>
